@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>拟物时钟</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /*底座*/
+        
+        .bg {
+            width: 400px;
+            height: 400px;
+            margin: 50px auto;
+            background: linear-gradient(to bottom, skyblue 0%, #29b2ea 100%);
+            border-radius: 20%;
+            box-shadow: 2px 2px 25px rgba(255, 255, 255, .5) inset, 20px 20px 40px #7fdaff inset, -10px -10px 30px rgba(0, 0, 50, .3) inset, -20px -20px 40px #16a5df inset, 10px 25px 40px -10px rgba(0, 0, 0, .5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="clock">
+            <div class="hour" id="h"></div>
+            <div class="min" id="m"></div>
+            <div class="sen" id="s">
+                <span class="black"></span>
+                <span class="red"></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+
+
+    // var s = document.getElementById('s');
+    // // 封装时间函数
+    // function getTime() {
+    //     // 得到我们当前的时间 
+    //     var date = new Date();
+    //     // 获得当前的秒数 * 度数 （6）  就是秒的度数
+    //     var ss = date.getSeconds();
+    //     s.style.transform = 'rotate(' + (ss * 6) + 'deg)';
+    // }
+    // getTime();
+
+       var s= document.getElementById('s');
+    function getTime(){
+
+     var date = new Date();
+     var haomiao = date.getMilliseconds();
+     var ss=date.getSeconds()+ haomiao / 1000;
+     s.style.transform = 'rotate('+ (ss *6)+'deg)';
+      var mm=date.getMinutes()+ ss / 60;
+        m.style.transform='rotate('+ (mm *6)+'deg)';
+        var hh=date.getMinutes()+ mm / 60;
+        h.style.transform='rotate('+ (hh *30)+'deg)';
+
+    }
+    getTime();
+    setInterval(getTime,1000);
+
+    //     setInterval(function(){
+    //     var m= document.getElementById('m');
+    // function getTime(){
+    //  var date = new Date();
+    //  var mm=date.getMinutes() + ss/ 60;
+    //  m.style.transform = 'rotate('+ (mm *6)+'deg)';
+    
+    // }
+    // getTime();
+    //     },)
+    //     setInterval(function(){
+    //     var h= document.getElementById('h');
+    // function getTime(){
+    //  var date = new Date();
+    //  var hh=date.getHours() + mm/ 60;
+    //  h.style.transform = 'rotate('+ (mm *30)+'deg)';
+    
+    // }
+    // getTime();
+    //     },)
+    
+</script>
+
+</html>

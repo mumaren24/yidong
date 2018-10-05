@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .vv1{
+            position: relative;
+           width: 500px;
+           height: 500px;
+           border: 1px solid red;
+           background-color: aliceblue; 
+           margin: 100px auto;
+        }
+        .vv1::after{
+            content: '';
+            width: 20px;
+            height: 70px;
+            background-color: green;
+            position: absolute;
+            bottom: 20px;
+            left: 180px;
+            border-radius: 10px;
+        }
+        .vv1::before{
+            content: '';
+            width: 20px;
+            height: 70px;
+            background-color: green;
+            position: absolute;
+            bottom: 20px;
+            right:  157px;
+            border-radius: 10px;
+        }
+       .vv2{
+            width: 250px;
+            height: 150px;
+            background-color: green;
+            position: absolute;
+            left: 140px;
+            margin-top: 10px; 
+            border-radius: 125px 125px 0 0;
+
+        }
+        .vv2::after{
+            content: '';
+           background-color: #fff;
+            width:20px;
+            height: 20px;
+            position: absolute;
+            top:70px;
+            left: 45px;
+            border-radius: 50%;
+        }
+        .vv2::before{
+            content: '';
+           background-color: #fff;
+            width:20px;
+            height: 20px;
+            position: absolute;
+            top:70px;
+            right:  45px;
+            border-radius: 50%;
+        }
+        .vv3{
+            position: absolute;
+            top :170px;
+            left: 140px;
+            width: 250px;
+            height: 230px;
+            background-color: green;
+            border-radius: 0 0 30px 30px;
+        }
+        .vv3::after{
+            content: '';
+            width: 30px;
+            height: 150px;
+            background-color:green;
+            position: absolute; 
+            top:20px;
+            left: -40px;
+            border-radius: 10px;
+        }
+        .vv3::before{
+            content: '';
+            width: 30px;
+            height: 150px;
+            background-color:green;
+            position: absolute; 
+            top:20px;
+            right:  -40px;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="vv1">
+        <div class="vv2"></div>
+        <div class="vv3"></div>
+
+
+    </div>
+</body>
+</html>

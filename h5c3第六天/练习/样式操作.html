@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       .red{
+           color: aqua;
+       }
+       .green{
+           color: aquamarine;
+       }
+       .blue{
+           color: blue;
+       }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>啦啦啊啦啦</li>
+        <li class="blue">我悄悄问我去</li>
+        <li>雨一直下</li>
+        <li>被风吹过的夏天</li>
+    </ul>
+    <input type="button" value="点击" id="btn">
+    <input type="button" value="dian" id="btn2">
+    <input type="button" value="点击啊" id="btn3">
+    <script>
+          window.onload=function(){
+            var vv=document.querySelector('#btn');
+            var li=document.querySelector('li');
+              vv.onclick=function(){
+                // document.querySelector("li").classList.add("red");
+                li.classList.add('red');
+                li.classList.remove('blue');
+                // document.querySelector("li").className="red underline"
+              };
+              var btn2=document.querySelector('#btn2');
+              btn2.onclick=function(){
+                document.querySelector('.blue').classList.remove('blue');
+              };
+              var btn3=document.querySelector('#btn3');
+              btn3.onclick=function(){
+                document.querySelectorAll("li")[2].classList.toggle("green");
+              }
+              
+          }
+         
+          
+    </script>
+</body>
+</html>

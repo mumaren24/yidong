@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+            <style>
+                @font-face {
+        font-family: 'icomoon';
+        src:  url('fonts/icomoon.eot?bqlajg');
+        src:  url('fonts/icomoon.eot?bqlajg#iefix') format('embedded-opentype'),
+            url('fonts/icomoon.ttf?bqlajg') format('truetype'),
+            url('fonts/icomoon.woff?bqlajg') format('woff'),
+            url('fonts/icomoon.svg?bqlajg#icomoon') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+
+        p{
+            position: relative;
+            width: 100px;
+            height: 30px;
+            border: 1px solid red;
+            font-family: icomoon;
+        }
+        p::after{
+            content: '\e9b0';
+            position: absolute;
+            top :10px;
+            left: 40px;
+
+        }
+        p:hover{
+            border: 1px solid blue;
+            color :pink;
+        }
+        
+    </style>
+</head>
+<body>
+    <p></p>
+</body>
+</html>

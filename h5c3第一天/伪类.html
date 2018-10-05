@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      div:nth-child(1){
+          position: relative;
+          width: 300px;
+          height: 200px;
+          background-color: aqua;
+           top: 100px;
+          left: 200px;
+      }
+      div:nth-child(2){
+          border-left: 1px dashed #ccc;
+        position: relative;
+          width: 100px;
+          height: 200px;
+          background-color: rgb(255, 0, 255);
+           top: -100px;
+          left: 500px;
+      }
+      .vv2::after{
+          content: "";
+          position: absolute;
+          top: -10px;
+          left: -10px;
+          width:20px ;
+          height: 20px;
+          border-radius: 10px;
+          background-color: #fff;
+      }
+      .vv2::before{
+          content: "";
+          position: absolute;
+          bottom:  -10px;
+          left: -10px;
+          width:20px ;
+          height: 20px;
+          border-radius: 10px;
+          background-color: #fff;
+      }
+    </style>
+</head>
+<body>
+    <div class="vv1"></div>
+    <div class="vv2"></div>
+</body>
+</html>

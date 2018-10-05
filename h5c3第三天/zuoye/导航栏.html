@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li{
+            list-style: none;
+            width: 100px;
+            height: 35px;
+            background-color: aqua;
+            float: left;
+            perspective: 100px;
+            margin-left: 30px;
+            line-height: 35px;
+            text-align: center;
+        }
+        .box{
+            position: relative;
+            width: 100%;
+            height: 100%;
+           transition: all 1s;
+           transform-style: preserve-3d;
+        }
+        .front,
+        .bottom {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .front{
+            background-color: blue;
+            transform: translateZ(17.5px);
+        }
+        .bottom{
+            transform: translateY(17.5PX) rotateX(-90deg); 
+            background-color: blueviolet;
+        }
+        .box:hover{
+              transform:  rotateX(90deg);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><div class="box">
+            <div class="front">我喔喔喔喔</div>    
+            <div class="bottom">啦啦啊啦啦</div> 
+        </div>
+        <li><div class="box">
+                <div class="front">我喔喔喔喔</div>    
+                <div class="bottom">啦啦啊啦啦</div> 
+            </div>
+            <li><div class="box">
+                    <div class="front">我喔喔喔喔</div>    
+                    <div class="bottom">啦啦啊啦啦</div> 
+                </div>
+                <li><div class="box">
+                        <div class="front">我喔喔喔喔</div>    
+                        <div class="bottom">啦啦啊啦啦</div> 
+                    </div>
+    </li>
+    </ul>
+</body>
+</html>

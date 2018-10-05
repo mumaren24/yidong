@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+         p{
+             width: 0px;
+            font-size: 30px;
+            overflow: hidden;
+            /* 强制一行内显示文字 */
+            white-space: nowrap;
+            animation: move 9s steps(10) infinite;
+         }
+      @keyframes move{
+          from{
+              width: 0;
+          }
+          to{
+              width: 300px;
+          }
+      }
+    </style>
+</head>
+<body>
+     <div>
+         <p>牧马人天生要强越野</p>
+     </div>
+</body>
+</html>

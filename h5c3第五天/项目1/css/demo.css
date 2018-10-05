@@ -1,0 +1,143 @@
+
+*{
+    margin: 0;
+    padding :0;
+}
+.section{
+    overflow: hidden;
+}
+.first{
+    display: flex;
+    position: relative;
+    background: linear-gradient(0deg, #00ffff,blue);
+}
+.second{
+    background: linear-gradient(90deg,green,  #00ffff,blue,purple);
+}
+/* .section{
+  background-position: 50% 50%;
+   background-size: cover;
+   background-repeat: no-repeat;
+
+} */
+.txt{
+    width: 766px;
+    height: 100%;
+    flex:1;
+    font-size: 30px;
+    color: #fff;
+    float: left;
+    background: url(../images/l1.jpg) no-repeat;
+    background-size:cover;
+}
+.txt h1{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+}
+.txt p{
+    margin-left: 100px;
+    width: 0;
+    height: 47px;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #00ffff;
+}
+.vv1{
+    width: 770px;
+    height: 100%;
+    flex:1;
+    float: right;
+    background: url(../images/r1.jpg) no-repeat;
+    background-size:cover;
+}
+
+.first.current .txt p{
+    width: 245px;
+    transition: width 8s steps(8);
+}
+
+.second .vv2-left{
+    width: 767px;
+    height: 760px;
+    position: absolute;
+    left: 0;
+    top: -1000px;
+    overflow: hidden;
+    background: url(../images/l2.jpg) no-repeat 50% 50%;
+     float: left;
+    background-size: cover;  
+}
+.second .vv2-right{
+           position: absolute;
+            right: 2px;
+            top: 1000px;
+            width: 767px;
+            height: 760px;
+            float: left;
+            overflow: hidden;
+			background: url(../images/r2.jpg) no-repeat 50% 50%;
+			background-size: cover;  
+}
+.second.current .vv2-left{
+     top:0;
+    transition: all 1s;
+}
+.second.current .vv2-right{
+    top: 0px;
+    transition: all 1s;
+}
+.second span{
+    position: absolute;
+    bottom: 100px;
+    left: -500px;
+    width: 600px;
+    height: 50px;
+    color: aqua;
+    font-size: 50px;
+}
+.second.current span{
+    left: 20px;
+    transition: all 1s 2s;
+}
+.vv3-left{
+    width: 767px;
+    height: 760px;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    overflow: hidden;
+    background: url(../images/l1.jpg) no-repeat 50% 50%;
+
+    background-size: cover;  
+    
+}
+.vv3-right{
+    width: 767px;
+    height: 760px;
+    position: absolute;
+    left: 767px;
+    top: 0;
+    /* overflow: hidden; */
+    background: url(../images/r1.jpg) no-repeat 50% 50%;
+  
+    background-size: cover;  
+}
+.vvvv1{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row; 
+    align-items:center;
+}
+.vvvv2{
+    height: 100%;
+    flex: 1;
+    background-color: blue;
+}
+.vvvv3{
+    height: 100%;
+    flex: 1;
+    background-color: aqua;
+}

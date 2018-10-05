@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        span{
+            display: block;
+            width: 200px;
+            height: 50px;
+            background-color:pink ;
+            margin: 100px auto;
+            line-height: 50px;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <span id="l">啦啦</span>
+    <script src="../css/jquery.min.js"></script>
+    <script>
+        //  window.addEventListener('online' ,function(){
+        //         $('#l').text("网络已经连接").fadeIn(500).delay(1000).fadeOut();
+        //  }); 通过 window.navigator.onLine 来检测网络是否可用
+         window.addEventListener('onclick',function(){
+              $('.l').text('端网络').fadeIn(500).delay(1000).fadeOut(1000);
+         });
+         window.addEventListener('offlick',function(){
+             $('.l').text('kaiwang').fadeIn(500).delay(1000).fadeOut(1000);
+         });
+          
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+        <style>
+           fieldset{
+               width: 500px;
+               height: 500px;
+               margin: 100px auto;
+           }
+         input{
+             height: 30px;
+             width: 100%;
+         }
+         meter{
+             margin: 3px auto;
+            width: 100%;
+           height: 30px;
+            }
+        </style>
+</head>
+<body>
+    <form action="">
+       <fieldset>
+           <legend>个人信息</legend>
+            <span>姓名</span>
+            <input type="text" placeholder="请输入" autofocus required><br>
+            <span>电话</span>
+            <input type="tel" required placeholder="输入电话号码"><br>
+            <span>成绩</span>
+            <input type="number" max="100" min="0" id="txt" value="90"><br>
+            <meter id="level" max="100" min="0" low="59" high="90" ></meter><br>
+            <span>邮箱地址</span>
+            <input type="email" required><br>
+            <span>所属学院</span>
+               <input type="text" id="collage" list="cList" placeholder="请选择">
+               <datalist id="cList">
+                   <option value="宝马"></option>
+                   <option value="特斯拉"></option>
+                   <option value="吉普"></option>
+               </datalist><br>
+           <span>出生日期</span>
+           <input type="datetime-local" ><br>
+           <input type="date" name="time"><br>
+           <input type="submit">
+       </fieldset>
+
+    </form>
+    <script>
+          var v1=document.getElementById('txt');
+          var v2=document.getElementById('level');
+            v1.oninput=function(){
+                v2.value=this.value;
+            }
+    </script>
+</body>
+</html>

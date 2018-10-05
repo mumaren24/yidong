@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 500px;
+        }
+        
+        .box {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            /* background-color: pink; */
+            margin: 100px auto;
+            transform-style: preserve-3d;
+            transform: scale3d(2, 1, 1) rotate3d(1, 0, 0, 0deg);
+            transition: all 1s;
+        }
+        
+        .box div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(1.png) no-repeat;
+            border: 1px solid #000;
+        }
+        /* 后面的图片 */
+        
+        .box div:nth-child(1) {
+            transform: translateZ(-100px) rotateX(180deg);
+        }
+        
+        .box div:nth-child(2) {
+            transform: translateY(100px) rotateX(-90deg);
+        }
+        
+        .box div:nth-child(3) {
+            transform: translateZ(100px) rotateX(0deg);
+        }
+        
+        .box div:nth-child(4) {
+            transform: translateY(-100px) rotateX(90deg);
+        }
+        
+        .box div:nth-child(5) {
+            transform: translateX(100px) rotateY(90deg);
+        }
+        
+        .box div:nth-child(6) {
+            transform: translateX(-100px) rotateY(-90deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div>第一面</div>
+        <div>第二面</div>
+        <div>第三面</div>
+        <div>第四面</div>
+        <div>第五面</div>
+        <div>第六面</div>
+    </div>
+    <button>下饭</button>
+    <button>上饭</button>
+    <script src="jquery-1.11.2.min.js"></script>
+    <script>
+        $(function() {
+            var flag = true;
+            var $key = 0;
+            $('button').eq(1).click(function() {
+                if (!flag) {
+                    return false;
+                }
+                flag = false;
+                $key++;
+                $('.box').css('transform', 'scale3d(2, 1, 1) rotate3d(1, 0, 0, ' + $key * 90 + 'deg)')
+            })
+            $('button').eq(0).click(function() {
+                if (!flag) {
+                    return false;
+                }
+                flag = false;
+                $key--;
+                $('.box').css('transform', 'scale3d(2, 1, 1) rotate3d(1, 0, 0, ' + $key * 90 + 'deg)')
+            })
+            $('.box').on('transitionend', function() {
+                flag = true;
+            })
+        })
+
+        //2. 节流阀   var flag
+        //3 只要过渡完成我们就可以 设置为true
+    </script>
+</body>
+
+</html>

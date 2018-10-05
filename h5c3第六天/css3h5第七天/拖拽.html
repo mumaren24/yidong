@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       p{
+           width: 200px;
+           height: 20px;
+           text-align: center;
+           background-color: blue;
+       }
+       #div1{
+           
+            width: 200px;
+            margin-left: 20px;
+            /* margin-top: 10px; */
+            float: left;
+            height: 200px;
+            border: 1px solid #000;
+       }
+       #div2{
+       
+        margin-left: 20px;
+        float: left;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+       }
+       #div3{
+      
+        float: left;
+        margin-left: 20px;
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+       }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <p id="p1" draggable="true">啊啊啊</p>
+        <p id="p1" draggable="true">啦啦啦啦啦啦</p>
+        <p id="p1" draggable="true">牧马人</p>
+    </div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <script>
+       var p=document.querySelector('#p1');
+       var obj=null;
+         document.ondragstart=function(e){
+          obj=e.target;
+         }
+         document.ondrag=function(){
+            
+         }
+         document.ondragend=function(){
+
+         }
+         var target=document.querySelector('#div2');
+         document.ondragenter=function(){
+              this.style.backgroundColour='blue';
+         }
+        
+         document.ondragover=function(){
+              return false;
+            }
+            document.ondragleave=function(e){
+                e.style.backgroundColour='red';
+}
+            document.ondrop=function(e){
+               e.target.appendChild(obj);
+            }
+    </script>
+</body>
+</html>

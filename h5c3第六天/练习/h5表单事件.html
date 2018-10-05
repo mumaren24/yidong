@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+      <style>
+          audio{
+              width: 200px;
+              height: 30px;
+          }
+      </style>
+</head>
+<body>
+    <div>雨一直下</div>
+     <audio controls="controls" autoplay muted>
+         <source src="../mp3/aa.mp3"> 
+         <source src="../mp3/aa.mp3">
+     </audio>
+    <script>
+         document.oncontextmenu = function(){
+              return false;
+            //   禁止右键
+         };
+         document.onselectstart = function(){
+             return false;
+            //  禁止选中功能
+         };
+         document.oncopy=function(){
+             return false;
+             //禁止复制功能
+         };
+    </script>
+</body>
+</html>

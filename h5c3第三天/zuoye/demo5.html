@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 200px;
+        height: 200px;
+        /* margin: 200px auto; */
+        background-color: aqua;
+       transition: all 3s;
+   animation: move 3s  linear infinite
+    }
+    /* div:hover{
+        transform: skewY(-30deg) rotate(60deg);
+    } */
+    @keyframes move {
+        0%{
+            transform: translateX(0px) rotate(0deg);
+        }
+        40%{
+            transform: translateX(600px) rotate(180deg);
+        }
+        70%{
+            transform: translate(600px,600px) rotate(360deg);
+        }
+        100%{
+            transform: translate(0px,600px) rotate(450deg);
+        }
+    }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.first {
+    width: 100%;
+    height: 800px;
+    background: url(images/bg2_87283a0.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.vv1 {
+    width: 800px;
+    height: 700px;
+    position: absolute;
+     left:343px;
+     top: 180px;
+}
+.shi1{
+    width: 80px;
+    height: 75px;
+    position: absolute;
+    left: 120px;
+    top: 0;
+    z-index: 4;
+    background: url(images/shi1_75f744d.png) ;
+    /* transition: all 2s; */
+    transform: translate(320px ,520px);
+}
+.shi2{
+    width: 276px;
+    height: 140px;
+    position: absolute;
+    left: 100px;
+    top: 57px;
+    z-index: 3;
+    background: url(images/shi2_29587be.png);
+    transform: translate(20px ,120px);
+}
+.shi3{
+    width: 172px;
+    height: 230px;
+    position: absolute;
+    left: 120px;
+   top: 112px;
+    z-index: 4;
+    background: url(images/shi3_e2d0678.png);
+    transform: translate(743px ,190px);
+}
+.shi4{
+    width: 276px;
+    height: 140px;
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    z-index: 1;
+    background: url(images/shi4_e893f53.png);
+    transform: translate(-56px ,590px);
+}
+.ji1{
+    width: 92px;
+    height: 90px;
+    position: absolute;
+    right: 344px;
+    top: -78px;
+    background: url(images/ji1_39b114b.png) no-repeat;
+    transform: translate(20px ,520px);
+}
+.ji2{
+    width: 127px;
+    height: 243px;
+    position: absolute;
+    right: 311px;
+    top: 0;
+    background: url(images/ji2_852cd0a.png) no-repeat;
+    transform: translate(389px ,-120px);
+}
+.ji3{
+    width: 195px;
+    height: 293px;
+    position: absolute;
+    right: 133px;
+    top: 0;
+    background: url(images/ji3_a328316.png) no-repeat;
+    transform: translate(301px ,20px);
+}
+.first.current .shi1{
+    /* left:120px ; */
+   transform: none;
+   transition: all 1s;
+}
+.first.current .shi2{
+    /* left:120px ; */
+   transform: none;
+   transition: all 1s;
+}
+.first.current .shi3{
+    /* left:120px ; */
+   transform: none;
+   transition: all 1s;
+}
+.first.current .shi4{
+    /* left:120px ; */
+   transform: none;
+   transition: all 1s;
+}
+.first.current .ji1{
+    transform: none;
+    transition: all 1s;
+}
+.first.current .ji2{
+    transform: none;
+    transition: all 1s;
+}
+.first.current .ji3{
+    transform: none;
+    transition: all 1s;
+}

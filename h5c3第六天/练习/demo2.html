@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /* div{
+            width: 200px;
+            height: 200px;
+            margin:10px auto; 
+        } */
+         fieldset{
+             width: 500px;
+             height: 500px;
+             margin: 0 auto;
+         }
+    </style>
+</head>
+<body><div>
+        <iframe height=498 width=510 src='http://player.youku.com/embed/XMzc3MDUxOTUyNA==' frameborder=0 'allowfullscreen'></iframe>
+  </div>
+       
+        <form action="">
+            <fieldset>
+                    <legend>个人信息</legend>
+                    <span>姓名</span>
+                    <input type="text" name="useName" required><br>
+                    <span>年龄</span>
+                    <input type="number" max="99" min="1" low=""><br>
+                    <span>成绩</span>
+                     <input type="number" min="0" max="100" id="txt">
+                    <meter max="100" min="0" high="60" low="70" value="70" id="vv" ></meter>
+                   <!-- <video src="../mp3/aa.mp3" controls="controls"></video>
+                   <audio src="../mp3/aa.mp3" autoplay> </audio> -->
+                   <audio controls ="controls" autoplay>
+                       <source src="../mp3/aa.mp3">
+                   </audio>
+                   <audio controls="controls">
+                        <source src="../mp3/aa.mp3" type="audio/wav">  
+                      </audio>
+                      <video autoplay controls muted>
+                            <source src="../mp3/mp4.mp4" >
+                      </video>
+                </fieldset>
+    </form>
+     <script>
+          var txt=document.getElementById('txt');
+          var  vv=document.getElementById('vv');
+           txt.oninput=function(){
+               vv.value=this.value;
+           }
+     </script>
+</body>
+</html>

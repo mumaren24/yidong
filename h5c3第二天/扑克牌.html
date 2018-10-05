@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .vv{
+            width: 155px;
+            height: 219px;
+            margin: 300px auto;
+            position: relative;
+        }
+         .vv img{
+             width: 100%;
+             height: 100%;
+             position: absolute;
+             left: 0;
+             top: 0;
+             /* 添加过度 */
+             transition: all 1s;
+             /* 设置中心点 */
+             transform-origin:  -100px -100px;
+             /* transform-origin: left bottom; */
+         }
+         .vv:hover img:nth-child(1){
+             transform: rotate(60deg);
+         }
+         .vv:hover img:nth-child(2){
+             transform: rotate(120deg);
+         }
+         .vv:hover img:nth-child(3){
+             transform: rotate(180deg);
+         }
+         .vv:hover img:nth-child(4){
+             transform: rotate(240deg);
+         }
+         .vv:hover img:nth-child(5){
+             transform: rotate(300deg);
+         }
+         .vv:hover img:nth-child(6){
+             transform: rotate(360deg);
+         }
+    </style>
+</head>
+<body>
+    <div class="vv">
+     <img src="images/pk1.png" alt="">
+     <img src="images/pk2.png" alt="">
+     <img src="images/pk3.png" alt="">
+     <img src="images/pk1.png" alt="">
+     <img src="images/pk2.png" alt="">
+     <img src="images/pk3.png" alt="">
+
+
+    </div>
+</body>
+</html>

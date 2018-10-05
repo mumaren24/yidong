@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*E:first-child:查找E元素的父级元素中的第一个E元素。在查找的时候并不会限制查找的元素的类型*/
+        li:first-child{
+            color: aqua;
+        }
+          /*查找的时候限制类型  first-of-type*/
+        /*1.也是相对于父元素
+        2.在查找的时候只会查找满足类型条件的元素，过渡掉其它类型的元素*/
+        li:first-of-type{
+            color: red;
+        }
+         /*指定索引位置 nth-child(从1开始的索引||关键字||表达式)不限制类型*/
+        li:nth-child(3){
+            color:green;
+        }
+        /* 限制类型 */
+        /* li:nth-of-type(1){
+            color: red;
+        } */
+        /* 限制类型的偶数 */
+        li:nth-of-type(even){
+            background-color: aqua;
+        }
+        /* li:nth-child(even){
+            background-color: blueviolet;
+        } */
+        /* li:nth-child(odd){
+            background-color: black;
+        } */
+    </style>
+</head>
+<body>
+    <ul>
+            <!-- <span>11111111111</span> -->
+        <span>11111111111</span>
+        <li>第一个li</li>
+        <li>第二个li</li>
+        <li>第三个li</li>
+        <li>第四li</li>
+    </ul>
+</body>
+</html>
